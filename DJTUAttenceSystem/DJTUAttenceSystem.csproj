@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B89A042F-A1C7-410B-8344-5225F66F8CAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DJTUAttenceSystem</RootNamespace>
+    <AssemblyName>DJTUAttenceSystem</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\..\Desktop\NPOI 2.2.1 binary package\Release\Net20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\..\..\Desktop\NPOI 2.2.1 binary package\Release\Net20\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\..\..\..\Desktop\NPOI 2.2.1 binary package\Release\Net20\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\..\..\..\Desktop\NPOI 2.2.1 binary package\Release\Net20\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\..\..\..\Desktop\NPOI 2.2.1 binary package\Release\Net20\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Course\AttandanceTask.cs" />
+    <Compile Include="Course\CheckTypeInputPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Course\CheckTypeInputPanel.Designer.cs">
+      <DependentUpon>CheckTypeInputPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\CourseEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Course\CourseEdit.Designer.cs">
+      <DependentUpon>CourseEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\CourseHall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Course\CourseHall.Designer.cs">
+      <DependentUpon>CourseHall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\CourseHallEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course\CourseHallEditForm.Designer.cs">
+      <DependentUpon>CourseHallEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\CourseReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course\CourseReport.Designer.cs">
+      <DependentUpon>CourseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\ExcelExporter.cs" />
+    <Compile Include="Course\ExcelReader.cs" />
+    <Compile Include="Course\ExtraAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course\ExtraAddForm.Designer.cs">
+      <DependentUpon>ExtraAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\HKButtonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Course\HKButtonPanel.Designer.cs">
+      <DependentUpon>HKButtonPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\HKTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Course\HKTab.Designer.cs">
+      <DependentUpon>HKTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\ScoreCal.cs" />
+    <Compile Include="FileIO.cs" />
+    <Compile Include="GBCollect.cs" />
+    <Compile Include="GlobalStation.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Entrance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrance.Designer.cs">
+      <DependentUpon>Entrance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryHall\CourseCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LibraryHall\CourseCell.Designer.cs">
+      <DependentUpon>CourseCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryHall\LibraryAddPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LibraryHall\LibraryAddPanel.Designer.cs">
+      <DependentUpon>LibraryAddPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryHall\LibraryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryHall\LibraryEditForm.Designer.cs">
+      <DependentUpon>LibraryEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryHall\LibraryHallPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LibraryHall\LibraryHallPanel.Designer.cs">
+      <DependentUpon>LibraryHallPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\AddPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login\AddPanel.Designer.cs">
+      <DependentUpon>AddPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login\LoginCell.Designer.cs">
+      <DependentUpon>LoginCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Attandance.cs" />
+    <Compile Include="Model\HKComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\HKComboBox.Designer.cs">
+      <DependentUpon>HKComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HKConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\HKConfirmForm.Designer.cs">
+      <DependentUpon>HKConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HKDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\HKDialogForm.Designer.cs">
+      <DependentUpon>HKDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HKFileDialog.cs" />
+    <Compile Include="Model\HKMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\HKSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\HKSelectForm.Designer.cs">
+      <DependentUpon>HKSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HKTableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\HKTableView.Designer.cs">
+      <DependentUpon>HKTableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HKTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\HKTextBox.Designer.cs">
+      <DependentUpon>HKTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HKTextBox2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\HKTextBox2.Designer.cs">
+      <DependentUpon>HKTextBox2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HKTextInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\HKTextInputForm.Designer.cs">
+      <DependentUpon>HKTextInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HorizontalScrollLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\HorizontalScrollLabel.Designer.cs">
+      <DependentUpon>HorizontalScrollLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Course\CheckTypeInputPanel.resx">
+      <DependentUpon>CheckTypeInputPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\CourseEdit.resx">
+      <DependentUpon>CourseEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\CourseHall.resx">
+      <DependentUpon>CourseHall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\CourseHallEditForm.resx">
+      <DependentUpon>CourseHallEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\CourseReport.resx">
+      <DependentUpon>CourseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\ExtraAddForm.resx">
+      <DependentUpon>ExtraAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\HKButtonPanel.resx">
+      <DependentUpon>HKButtonPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\HKTab.resx">
+      <DependentUpon>HKTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entrance.resx">
+      <DependentUpon>Entrance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryHall\CourseCell.resx">
+      <DependentUpon>CourseCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryHall\LibraryAddPanel.resx">
+      <DependentUpon>LibraryAddPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryHall\LibraryEditForm.resx">
+      <DependentUpon>LibraryEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryHall\LibraryHallPanel.resx">
+      <DependentUpon>LibraryHallPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\AddPanel.resx">
+      <DependentUpon>AddPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginCell.resx">
+      <DependentUpon>LoginCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\HKComboBox.resx">
+      <DependentUpon>HKComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\HKConfirmForm.resx">
+      <DependentUpon>HKConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\HKDialogForm.resx">
+      <DependentUpon>HKDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\HKSelectForm.resx">
+      <DependentUpon>HKSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\HKTableView.resx">
+      <DependentUpon>HKTableView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\HKTextBox.resx">
+      <DependentUpon>HKTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\HKTextBox2.resx">
+      <DependentUpon>HKTextBox2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\HKTextInputForm.resx">
+      <DependentUpon>HKTextInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\HorizontalScrollLabel.resx">
+      <DependentUpon>HorizontalScrollLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s1m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.5m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting1.5m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add4-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in1-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out2-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library2-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library3-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes1-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no2-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes3-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library3-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1-24m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export1-24m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expert1-32m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher1-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher2-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit1-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1-32m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1-48m1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct1-24m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct1-32m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct1-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick-32m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close3-32m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back3-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode1-32m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mode1-48m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add3-16m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add3-24m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete3-16m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete3-24m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close2-32m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes3-32m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SpeechLib">
+      <Guid>{C866CA3A-32F7-11D2-9602-00C04F8EE628}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

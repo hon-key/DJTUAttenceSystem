@@ -1,0 +1,10 @@
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\bin\Debug\DJTUAttenceSystemTests.dll
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\bin\Debug\DJTUAttenceSystemTests.pdb
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\bin\Debug\DJTUAttenceSystem.exe
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\bin\Debug\Interop.SpeechLib.dll
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\bin\Debug\DJTUAttenceSystem.pdb
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\obj\Debug\DJTUAttenceSystemTests.csprojResolveAssemblyReference.cache
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\obj\Debug\DJTUAttenceSystemTests.dll
+C:\Users\Cein\Documents\Visual Studio 2015\Projects\DJTUAttenceSystem\DJTUAttenceSystemTests\obj\Debug\DJTUAttenceSystemTests.pdb
